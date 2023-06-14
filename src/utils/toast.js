@@ -1,18 +1,18 @@
-import { toast } from 'react-toastify';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const showToast = (message, type = 'info') => {
   switch (type) {
     case 'success':
-      toast.success(message);
+      Notify.success(message);
       break;
     case 'error':
-      toast.error(message);
+      Notify.failure(message);
       break;
     case 'warning':
-      toast.warning(message);
+      Notify.warning(message);
       break;
     default:
-      toast.info(message);
+      Notify.info(message);
       break;
   }
 };
